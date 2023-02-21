@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>All items</title>
+  </head>
+  <body>
+    <section>
+        <ul>
+        {% for i in items %}
+        <li><a href="{% url 'show-item' i.pk %}">
+        <p>{{ i.name }}</p>
+        <p>$ {{ i.display_price }}</p>
+        </a></li>
+        {% endfor %}
+        </ul>
+    </section>
+  </body>
+</html>
